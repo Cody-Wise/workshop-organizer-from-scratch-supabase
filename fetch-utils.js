@@ -26,6 +26,9 @@ export async function createParticipant(name, workshop_id){
 
     return response.body;
 
+    
+
+
 }
 
 export async function getParticipants(someId){
@@ -48,6 +51,20 @@ export async function deleteParticipant(id){
         .match({ id: id });
 
     return response.body;
+}
+
+export async function editParticipant(id, name, workshop_id){
+    const response = await client
+
+        .from('participants')
+        .update({
+            name: name,
+            workshop_id: workshop_id
+        })
+        .match({ id: id });
+
+    return response.body;
+
 }
 
 export function getUser() {

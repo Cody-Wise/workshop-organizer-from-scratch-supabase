@@ -17,7 +17,7 @@ export function renderWorkshop(workshop){
 
         participantlink.textContent = participant.name;
 
-        participant.href = `../edit-participant/?id=${participant.id}`;
+        participantlink.href = `../edit-participants/?id=${participant.id}`;
 
         workshopsEl.append(participantlink);
 

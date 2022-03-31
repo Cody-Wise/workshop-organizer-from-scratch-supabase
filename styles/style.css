@@ -129,3 +129,24 @@ footer {
 .auth-container button {
     margin: 10px;
 }
+
+.workshop {
+    border: dotted 1px black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+}
+.workshops-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+label{
+    display: block;
+}
+
+a {
+    display: block;
+    margin: 20px;
+}
