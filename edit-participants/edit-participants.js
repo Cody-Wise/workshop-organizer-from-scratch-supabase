@@ -1,8 +1,10 @@
-import { checkAuth, getWorkshops, logout, editParticipant, getParticipants } from '../fetch-utils.js';
+import { checkAuth, getWorkshops, logout, editParticipant, getParticipants, deleteParticipant } from '../fetch-utils.js';
 
 const selectEl = document.querySelector('select');
 const formEl = document.querySelector('form');
 const nameInput = document.querySelector('#nameinput');
+const deleteButton = document.querySelector('#delete-button');
+
 
 
 const params = new URLSearchParams(window.location.search);
@@ -36,7 +38,7 @@ window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
     const participant = await getParticipants(params.get('id'));
 
-    console.log(params.get('id'));
+  
 
 
     nameInput.value = participant.name;
@@ -59,6 +61,16 @@ window.addEventListener('load', async () => {
     }
     
 });
+
+deleteButton.addEventListener('click', async () => {
+
+    await deleteParticipant(params.get('id'));
+
+    window.location.href = '../workshops';
+
+    
+});
+
 
 
 

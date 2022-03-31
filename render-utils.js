@@ -4,7 +4,7 @@ export function renderWorkshop(workshop){
     const topicEl = document.createElement('h3');
 
 
-    workshopsEl.classList.add('workshops');
+    workshopsEl.classList.add('workshop');
 
     topicEl.textContent = workshop.topic;
 
