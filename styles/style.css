@@ -60,6 +60,7 @@ h2 {
 
 .gutter-right {
     margin-right: 20px;
+    display: flex;
 }
 
 .main-logo {
@@ -128,4 +129,26 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+
+.workshop {
+    border: dotted 1px black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+.workshop-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+label{
+    display: block;
+}
+
+a {
+    display: block;
+    margin: 20px;
 }
